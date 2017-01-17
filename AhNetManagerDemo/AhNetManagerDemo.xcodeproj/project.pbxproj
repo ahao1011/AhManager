@@ -1,0 +1,673 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1222CC4AA11992DF51C9FD8F /* Pods_AhNetManagerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B8E790DA9C89A07736B70A /* Pods_AhNetManagerDemo.framework */; };
+		E0912F871E2DC66900091321 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E0912F861E2DC66900091321 /* main.m */; };
+		E0912F8A1E2DC66900091321 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E0912F891E2DC66900091321 /* AppDelegate.m */; };
+		E0912F8D1E2DC66900091321 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0912F8C1E2DC66900091321 /* ViewController.m */; };
+		E0912F901E2DC66900091321 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0912F8E1E2DC66900091321 /* Main.storyboard */; };
+		E0912F921E2DC66900091321 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0912F911E2DC66900091321 /* Assets.xcassets */; };
+		E0912F951E2DC66900091321 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0912F931E2DC66900091321 /* LaunchScreen.storyboard */; };
+		E0912FA01E2DC66900091321 /* AhNetManagerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E0912F9F1E2DC66900091321 /* AhNetManagerDemoTests.m */; };
+		E0912FAB1E2DC66900091321 /* AhNetManagerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E0912FAA1E2DC66900091321 /* AhNetManagerDemoUITests.m */; };
+		E0912FCD1E2DC74C00091321 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = E0912FC81E2DC74C00091321 /* test.png */; };
+		E0912FCE1E2DC74C00091321 /* TextRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E0912FCA1E2DC74C00091321 /* TextRequest.m */; };
+		E0912FCF1E2DC74C00091321 /* TextResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E0912FCC1E2DC74C00091321 /* TextResult.m */; };
+		E0912FEB1E2DCE4600091321 /* AhRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E0912FE21E2DCE4600091321 /* AhRequest.m */; };
+		E0912FEC1E2DCE4600091321 /* AhResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E0912FE41E2DCE4600091321 /* AhResult.m */; };
+		E0912FED1E2DCE4600091321 /* BaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E0912FE61E2DCE4600091321 /* BaseObject.m */; };
+		E0912FEE1E2DCE4600091321 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E0912FE81E2DCE4600091321 /* NetManager.m */; };
+		E0912FEF1E2DCE4600091321 /* SystemSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E0912FEA1E2DCE4600091321 /* SystemSet.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E0912F9C1E2DC66900091321 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0912F7A1E2DC66900091321 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0912F811E2DC66900091321;
+			remoteInfo = AhNetManagerDemo;
+		};
+		E0912FA71E2DC66900091321 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0912F7A1E2DC66900091321 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0912F811E2DC66900091321;
+			remoteInfo = AhNetManagerDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1CD414649DC0BF80EDDE2C0F /* Pods-AhNetManagerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AhNetManagerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AhNetManagerDemo/Pods-AhNetManagerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		4B64A8CAE89970AD1921D52C /* Pods-AhNetManagerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AhNetManagerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AhNetManagerDemo/Pods-AhNetManagerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		84B8E790DA9C89A07736B70A /* Pods_AhNetManagerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AhNetManagerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0912F821E2DC66900091321 /* AhNetManagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AhNetManagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0912F861E2DC66900091321 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E0912F881E2DC66900091321 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E0912F891E2DC66900091321 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E0912F8B1E2DC66900091321 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E0912F8C1E2DC66900091321 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E0912F8F1E2DC66900091321 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E0912F911E2DC66900091321 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E0912F941E2DC66900091321 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E0912F961E2DC66900091321 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0912F9B1E2DC66900091321 /* AhNetManagerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AhNetManagerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0912F9F1E2DC66900091321 /* AhNetManagerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AhNetManagerDemoTests.m; sourceTree = "<group>"; };
+		E0912FA11E2DC66900091321 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0912FA61E2DC66900091321 /* AhNetManagerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AhNetManagerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0912FAA1E2DC66900091321 /* AhNetManagerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AhNetManagerDemoUITests.m; sourceTree = "<group>"; };
+		E0912FAC1E2DC66900091321 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0912FC81E2DC74C00091321 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		E0912FC91E2DC74C00091321 /* TextRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextRequest.h; sourceTree = "<group>"; };
+		E0912FCA1E2DC74C00091321 /* TextRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextRequest.m; sourceTree = "<group>"; };
+		E0912FCB1E2DC74C00091321 /* TextResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextResult.h; sourceTree = "<group>"; };
+		E0912FCC1E2DC74C00091321 /* TextResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextResult.m; sourceTree = "<group>"; };
+		E0912FE11E2DCE4600091321 /* AhRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AhRequest.h; sourceTree = "<group>"; };
+		E0912FE21E2DCE4600091321 /* AhRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AhRequest.m; sourceTree = "<group>"; };
+		E0912FE31E2DCE4600091321 /* AhResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AhResult.h; sourceTree = "<group>"; };
+		E0912FE41E2DCE4600091321 /* AhResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AhResult.m; sourceTree = "<group>"; };
+		E0912FE51E2DCE4600091321 /* BaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseObject.h; sourceTree = "<group>"; };
+		E0912FE61E2DCE4600091321 /* BaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseObject.m; sourceTree = "<group>"; };
+		E0912FE71E2DCE4600091321 /* NetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetManager.h; sourceTree = "<group>"; };
+		E0912FE81E2DCE4600091321 /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
+		E0912FE91E2DCE4600091321 /* SystemSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemSet.h; sourceTree = "<group>"; };
+		E0912FEA1E2DCE4600091321 /* SystemSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemSet.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E0912F7F1E2DC66900091321 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1222CC4AA11992DF51C9FD8F /* Pods_AhNetManagerDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0912F981E2DC66900091321 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0912FA31E2DC66900091321 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7DF638819A483DFE3730E204 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B64A8CAE89970AD1921D52C /* Pods-AhNetManagerDemo.debug.xcconfig */,
+				1CD414649DC0BF80EDDE2C0F /* Pods-AhNetManagerDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ABF7ABC978960401BA351DD3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84B8E790DA9C89A07736B70A /* Pods_AhNetManagerDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0912F791E2DC66900091321 = {
+			isa = PBXGroup;
+			children = (
+				E0912F841E2DC66900091321 /* AhNetManagerDemo */,
+				E0912F9E1E2DC66900091321 /* AhNetManagerDemoTests */,
+				E0912FA91E2DC66900091321 /* AhNetManagerDemoUITests */,
+				E0912F831E2DC66900091321 /* Products */,
+				7DF638819A483DFE3730E204 /* Pods */,
+				ABF7ABC978960401BA351DD3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E0912F831E2DC66900091321 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E0912F821E2DC66900091321 /* AhNetManagerDemo.app */,
+				E0912F9B1E2DC66900091321 /* AhNetManagerDemoTests.xctest */,
+				E0912FA61E2DC66900091321 /* AhNetManagerDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E0912F841E2DC66900091321 /* AhNetManagerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E0912FE01E2DCE4600091321 /* AhManager */,
+				E0912F881E2DC66900091321 /* AppDelegate.h */,
+				E0912F891E2DC66900091321 /* AppDelegate.m */,
+				E0912F8B1E2DC66900091321 /* ViewController.h */,
+				E0912F8C1E2DC66900091321 /* ViewController.m */,
+				E0912F8E1E2DC66900091321 /* Main.storyboard */,
+				E0912FC81E2DC74C00091321 /* test.png */,
+				E0912FC91E2DC74C00091321 /* TextRequest.h */,
+				E0912FCA1E2DC74C00091321 /* TextRequest.m */,
+				E0912FCB1E2DC74C00091321 /* TextResult.h */,
+				E0912FCC1E2DC74C00091321 /* TextResult.m */,
+				E0912F911E2DC66900091321 /* Assets.xcassets */,
+				E0912F931E2DC66900091321 /* LaunchScreen.storyboard */,
+				E0912F961E2DC66900091321 /* Info.plist */,
+				E0912F851E2DC66900091321 /* Supporting Files */,
+			);
+			path = AhNetManagerDemo;
+			sourceTree = "<group>";
+		};
+		E0912F851E2DC66900091321 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E0912F861E2DC66900091321 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E0912F9E1E2DC66900091321 /* AhNetManagerDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				E0912F9F1E2DC66900091321 /* AhNetManagerDemoTests.m */,
+				E0912FA11E2DC66900091321 /* Info.plist */,
+			);
+			path = AhNetManagerDemoTests;
+			sourceTree = "<group>";
+		};
+		E0912FA91E2DC66900091321 /* AhNetManagerDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E0912FAA1E2DC66900091321 /* AhNetManagerDemoUITests.m */,
+				E0912FAC1E2DC66900091321 /* Info.plist */,
+			);
+			path = AhNetManagerDemoUITests;
+			sourceTree = "<group>";
+		};
+		E0912FE01E2DCE4600091321 /* AhManager */ = {
+			isa = PBXGroup;
+			children = (
+				E0912FE11E2DCE4600091321 /* AhRequest.h */,
+				E0912FE21E2DCE4600091321 /* AhRequest.m */,
+				E0912FE31E2DCE4600091321 /* AhResult.h */,
+				E0912FE41E2DCE4600091321 /* AhResult.m */,
+				E0912FE51E2DCE4600091321 /* BaseObject.h */,
+				E0912FE61E2DCE4600091321 /* BaseObject.m */,
+				E0912FE71E2DCE4600091321 /* NetManager.h */,
+				E0912FE81E2DCE4600091321 /* NetManager.m */,
+				E0912FE91E2DCE4600091321 /* SystemSet.h */,
+				E0912FEA1E2DCE4600091321 /* SystemSet.m */,
+			);
+			path = AhManager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E0912F811E2DC66900091321 /* AhNetManagerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0912FAF1E2DC66900091321 /* Build configuration list for PBXNativeTarget "AhNetManagerDemo" */;
+			buildPhases = (
+				7FD9DE9FCE9987B560ABFB34 /* [CP] Check Pods Manifest.lock */,
+				E0912F7E1E2DC66900091321 /* Sources */,
+				E0912F7F1E2DC66900091321 /* Frameworks */,
+				E0912F801E2DC66900091321 /* Resources */,
+				0BE99703359CBD547F33B748 /* [CP] Embed Pods Frameworks */,
+				616ACBD7B9E4F630816946EC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AhNetManagerDemo;
+			productName = AhNetManagerDemo;
+			productReference = E0912F821E2DC66900091321 /* AhNetManagerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E0912F9A1E2DC66900091321 /* AhNetManagerDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0912FB21E2DC66900091321 /* Build configuration list for PBXNativeTarget "AhNetManagerDemoTests" */;
+			buildPhases = (
+				E0912F971E2DC66900091321 /* Sources */,
+				E0912F981E2DC66900091321 /* Frameworks */,
+				E0912F991E2DC66900091321 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E0912F9D1E2DC66900091321 /* PBXTargetDependency */,
+			);
+			name = AhNetManagerDemoTests;
+			productName = AhNetManagerDemoTests;
+			productReference = E0912F9B1E2DC66900091321 /* AhNetManagerDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E0912FA51E2DC66900091321 /* AhNetManagerDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0912FB51E2DC66900091321 /* Build configuration list for PBXNativeTarget "AhNetManagerDemoUITests" */;
+			buildPhases = (
+				E0912FA21E2DC66900091321 /* Sources */,
+				E0912FA31E2DC66900091321 /* Frameworks */,
+				E0912FA41E2DC66900091321 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E0912FA81E2DC66900091321 /* PBXTargetDependency */,
+			);
+			name = AhNetManagerDemoUITests;
+			productName = AhNetManagerDemoUITests;
+			productReference = E0912FA61E2DC66900091321 /* AhNetManagerDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E0912F7A1E2DC66900091321 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = ah;
+				TargetAttributes = {
+					E0912F811E2DC66900091321 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = VW4E4L32LG;
+						ProvisioningStyle = Automatic;
+					};
+					E0912F9A1E2DC66900091321 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = VW4E4L32LG;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E0912F811E2DC66900091321;
+					};
+					E0912FA51E2DC66900091321 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = VW4E4L32LG;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E0912F811E2DC66900091321;
+					};
+				};
+			};
+			buildConfigurationList = E0912F7D1E2DC66900091321 /* Build configuration list for PBXProject "AhNetManagerDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E0912F791E2DC66900091321;
+			productRefGroup = E0912F831E2DC66900091321 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E0912F811E2DC66900091321 /* AhNetManagerDemo */,
+				E0912F9A1E2DC66900091321 /* AhNetManagerDemoTests */,
+				E0912FA51E2DC66900091321 /* AhNetManagerDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E0912F801E2DC66900091321 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0912F951E2DC66900091321 /* LaunchScreen.storyboard in Resources */,
+				E0912F921E2DC66900091321 /* Assets.xcassets in Resources */,
+				E0912F901E2DC66900091321 /* Main.storyboard in Resources */,
+				E0912FCD1E2DC74C00091321 /* test.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0912F991E2DC66900091321 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0912FA41E2DC66900091321 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BE99703359CBD547F33B748 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AhNetManagerDemo/Pods-AhNetManagerDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		616ACBD7B9E4F630816946EC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AhNetManagerDemo/Pods-AhNetManagerDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FD9DE9FCE9987B560ABFB34 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E0912F7E1E2DC66900091321 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0912F8D1E2DC66900091321 /* ViewController.m in Sources */,
+				E0912FED1E2DCE4600091321 /* BaseObject.m in Sources */,
+				E0912F8A1E2DC66900091321 /* AppDelegate.m in Sources */,
+				E0912F871E2DC66900091321 /* main.m in Sources */,
+				E0912FEC1E2DCE4600091321 /* AhResult.m in Sources */,
+				E0912FCE1E2DC74C00091321 /* TextRequest.m in Sources */,
+				E0912FEB1E2DCE4600091321 /* AhRequest.m in Sources */,
+				E0912FEF1E2DCE4600091321 /* SystemSet.m in Sources */,
+				E0912FEE1E2DCE4600091321 /* NetManager.m in Sources */,
+				E0912FCF1E2DC74C00091321 /* TextResult.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0912F971E2DC66900091321 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0912FA01E2DC66900091321 /* AhNetManagerDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0912FA21E2DC66900091321 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0912FAB1E2DC66900091321 /* AhNetManagerDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E0912F9D1E2DC66900091321 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0912F811E2DC66900091321 /* AhNetManagerDemo */;
+			targetProxy = E0912F9C1E2DC66900091321 /* PBXContainerItemProxy */;
+		};
+		E0912FA81E2DC66900091321 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0912F811E2DC66900091321 /* AhNetManagerDemo */;
+			targetProxy = E0912FA71E2DC66900091321 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E0912F8E1E2DC66900091321 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0912F8F1E2DC66900091321 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E0912F931E2DC66900091321 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0912F941E2DC66900091321 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E0912FAD1E2DC66900091321 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E0912FAE1E2DC66900091321 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E0912FB01E2DC66900091321 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B64A8CAE89970AD1921D52C /* Pods-AhNetManagerDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VW4E4L32LG;
+				INFOPLIST_FILE = AhNetManagerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.hebeisj.AhNetManagerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E0912FB11E2DC66900091321 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CD414649DC0BF80EDDE2C0F /* Pods-AhNetManagerDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VW4E4L32LG;
+				INFOPLIST_FILE = AhNetManagerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.hebeisj.AhNetManagerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E0912FB31E2DC66900091321 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = VW4E4L32LG;
+				INFOPLIST_FILE = AhNetManagerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.hebeisj.AhNetManagerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AhNetManagerDemo.app/AhNetManagerDemo";
+			};
+			name = Debug;
+		};
+		E0912FB41E2DC66900091321 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = VW4E4L32LG;
+				INFOPLIST_FILE = AhNetManagerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.hebeisj.AhNetManagerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AhNetManagerDemo.app/AhNetManagerDemo";
+			};
+			name = Release;
+		};
+		E0912FB61E2DC66900091321 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = VW4E4L32LG;
+				INFOPLIST_FILE = AhNetManagerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.hebeisj.AhNetManagerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AhNetManagerDemo;
+			};
+			name = Debug;
+		};
+		E0912FB71E2DC66900091321 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = VW4E4L32LG;
+				INFOPLIST_FILE = AhNetManagerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.hebeisj.AhNetManagerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AhNetManagerDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E0912F7D1E2DC66900091321 /* Build configuration list for PBXProject "AhNetManagerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0912FAD1E2DC66900091321 /* Debug */,
+				E0912FAE1E2DC66900091321 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0912FAF1E2DC66900091321 /* Build configuration list for PBXNativeTarget "AhNetManagerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0912FB01E2DC66900091321 /* Debug */,
+				E0912FB11E2DC66900091321 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0912FB21E2DC66900091321 /* Build configuration list for PBXNativeTarget "AhNetManagerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0912FB31E2DC66900091321 /* Debug */,
+				E0912FB41E2DC66900091321 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0912FB51E2DC66900091321 /* Build configuration list for PBXNativeTarget "AhNetManagerDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0912FB61E2DC66900091321 /* Debug */,
+				E0912FB71E2DC66900091321 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E0912F7A1E2DC66900091321 /* Project object */;
+}
