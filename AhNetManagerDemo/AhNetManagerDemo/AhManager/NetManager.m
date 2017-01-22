@@ -24,25 +24,22 @@
 #import "AhRequest.h"
 #import "AFNetworkReachabilityManager.h"
 #import "SystemSet.h"
+#import "MBProgressHUD+MJ.h"
 
 /**接受SessionTask的数组*/
 static NSMutableArray *TaskArr;
 
 @implementation NetManager
-
 /**网络连接状态-->实时监控网络状态的变化*/
 + (void)NetStatusNotiStart{
     
-    
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
-    
     // 检测网络连接的单例,网络变化时的回调方法
     [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
        
         switch  (status)  {
                 
             case   AFNetworkReachabilityStatusReachableViaWWAN:
-                
                 [[NSNotificationCenter defaultCenter]postNotificationName:NET_CHANGE_WWAN object:nil];
             break;
                 
@@ -51,9 +48,7 @@ static NSMutableArray *TaskArr;
             break;
                 
             case   AFNetworkReachabilityStatusNotReachable:
-                
                 [[NSNotificationCenter defaultCenter]postNotificationName:NET_CHANGE_NotReachable object:nil];
-
                 break;
             default:
                 
@@ -460,17 +455,26 @@ static NSMutableArray *TaskArr;
 #pragma mark- 转圈
 + (void)showWaitView:(BOOL)IsShow{
     
+    if (IsShow) {
+        [MBProgressHUD showMessage:@"加载中"];
+    }else{
+        [MBProgressHUD hideHUD];
+    }
 }
 #pragma mark- 抛异常
 + (void)showMessage:(NSString *)message{
     
-   
+    [MBProgressHUD showTitleMessage:message];
 }
 
 #pragma mark- 转圈+定制描述
 + (void)showWaitView:(BOOL)IsShow withTitle:(NSString*)title{
     
-    
+    if (IsShow) {
+        [MBProgressHUD showMessage:title];
+    }else{
+        [MBProgressHUD hideHUD];
+    }
 }
 
 #pragma mark - 网络成功后的处理
