@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name         = 'AhManager'
-  s.version      = '0.3.3'
+  s.version      = '0.3.4'
   s.ios.deployment_target = '8.0'
   s.summary      = 'NetManager base on AFN  by 阿浩'
   s.homepage     = 'https://github.com/ahao1011/AhManager'
