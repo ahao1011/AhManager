@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1222CC4AA11992DF51C9FD8F /* Pods_AhNetManagerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B8E790DA9C89A07736B70A /* Pods_AhNetManagerDemo.framework */; };
-		E0046A981E34969D00599E98 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E0046A951E34969D00599E98 /* MBProgressHUD.bundle */; };
-		E0046A991E34969D00599E98 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = E0046A971E34969D00599E98 /* MBProgressHUD+MJ.m */; };
 		E0912F871E2DC66900091321 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E0912F861E2DC66900091321 /* main.m */; };
 		E0912F8A1E2DC66900091321 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E0912F891E2DC66900091321 /* AppDelegate.m */; };
 		E0912F8D1E2DC66900091321 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0912F8C1E2DC66900091321 /* ViewController.m */; };
@@ -49,9 +47,6 @@
 		1CD414649DC0BF80EDDE2C0F /* Pods-AhNetManagerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AhNetManagerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AhNetManagerDemo/Pods-AhNetManagerDemo.release.xcconfig"; sourceTree = "<group>"; };
 		4B64A8CAE89970AD1921D52C /* Pods-AhNetManagerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AhNetManagerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AhNetManagerDemo/Pods-AhNetManagerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		84B8E790DA9C89A07736B70A /* Pods_AhNetManagerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AhNetManagerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E0046A951E34969D00599E98 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
-		E0046A961E34969D00599E98 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
-		E0046A971E34969D00599E98 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		E0912F821E2DC66900091321 /* AhNetManagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AhNetManagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0912F861E2DC66900091321 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E0912F881E2DC66900091321 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -201,9 +196,6 @@
 		E0912FE01E2DCE4600091321 /* AhManager */ = {
 			isa = PBXGroup;
 			children = (
-				E0046A951E34969D00599E98 /* MBProgressHUD.bundle */,
-				E0046A961E34969D00599E98 /* MBProgressHUD+MJ.h */,
-				E0046A971E34969D00599E98 /* MBProgressHUD+MJ.m */,
 				E0912FE11E2DCE4600091321 /* AhRequest.h */,
 				E0912FE21E2DCE4600091321 /* AhRequest.m */,
 				E0912FE31E2DCE4600091321 /* AhResult.h */,
@@ -332,7 +324,6 @@
 			files = (
 				E0912F951E2DC66900091321 /* LaunchScreen.storyboard in Resources */,
 				E0912F921E2DC66900091321 /* Assets.xcassets in Resources */,
-				E0046A981E34969D00599E98 /* MBProgressHUD.bundle in Resources */,
 				E0912F901E2DC66900091321 /* Main.storyboard in Resources */,
 				E0912FCD1E2DC74C00091321 /* test.png in Resources */,
 			);
@@ -412,7 +403,6 @@
 				E0912F8A1E2DC66900091321 /* AppDelegate.m in Sources */,
 				E0912F871E2DC66900091321 /* main.m in Sources */,
 				E0912FEC1E2DCE4600091321 /* AhResult.m in Sources */,
-				E0046A991E34969D00599E98 /* MBProgressHUD+MJ.m in Sources */,
 				E0912FCE1E2DC74C00091321 /* TextRequest.m in Sources */,
 				E0912FEB1E2DCE4600091321 /* AhRequest.m in Sources */,
 				E0912FEF1E2DCE4600091321 /* SystemSet.m in Sources */,

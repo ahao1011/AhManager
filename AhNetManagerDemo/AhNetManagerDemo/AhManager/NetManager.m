@@ -24,7 +24,6 @@
 #import "AhRequest.h"
 #import "AFNetworkReachabilityManager.h"
 #import "SystemSet.h"
-#import "MBProgressHUD+MJ.h"
 
 /**接受SessionTask的数组*/
 static NSMutableArray *TaskArr;
@@ -455,26 +454,18 @@ static NSMutableArray *TaskArr;
 #pragma mark- 转圈
 + (void)showWaitView:(BOOL)IsShow{
     
-    if (IsShow) {
-        [MBProgressHUD showMessage:@"加载中"];
-    }else{
-        [MBProgressHUD hideHUD];
-    }
+   
 }
 #pragma mark- 抛异常
 + (void)showMessage:(NSString *)message{
     
-    [MBProgressHUD showTitleMessage:message];
+   
 }
 
 #pragma mark- 转圈+定制描述
 + (void)showWaitView:(BOOL)IsShow withTitle:(NSString*)title{
     
-    if (IsShow) {
-        [MBProgressHUD showMessage:title];
-    }else{
-        [MBProgressHUD hideHUD];
-    }
+   
 }
 
 #pragma mark - 网络成功后的处理
