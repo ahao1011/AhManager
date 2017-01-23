@@ -11,6 +11,7 @@
 #import "TextResult.h"
 #import "TextRequest.h"
 #import "SystemSet.h"
+#import "NetTool.h"
 
 @interface ViewController ()
 
@@ -64,6 +65,7 @@
         Bre011Res *result = (Bre011Res *)responseObject;
         Bre011ResItem *item = result.data.firstObject;
         NSLog(@"路径:%@",item.picurl);
+        [NetTool showmsg:@"上传成功" Tovc:self];
         
     } failure:^(NSError *error) {
         

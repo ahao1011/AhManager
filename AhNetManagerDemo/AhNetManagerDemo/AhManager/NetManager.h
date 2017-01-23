@@ -14,11 +14,17 @@
 // 通知
 
 /**更改为数据流量*/
-static  NSString *NET_CHANGE_WWAN = @"NET_CHANGE_WWAN";
+static  NSString *NOTI_NET_CHANGE_WWAN = @"NET_CHANGE_WWAN";
 /**更改为无线*/
-static  NSString *NET_CHANGE_WiFi = @"NET_CHANGE_WiFi";
+static  NSString *NOTI_NET_CHANGE_WiFi = @"NET_CHANGE_WiFi";
 /**更改为无网络*/
-static  NSString *NET_CHANGE_NotReachable = @"NET_CHANGE_NotReachable";
+static  NSString *NOTI_NET_CHANGE_NotReachable = @"NET_CHANGE_NotReachable";
+
+
+/**登录超时*/
+static  NSString *NOTI_LOGIN_OUT= @"NOTI_LOGIN_OUT";
+/**单点登录,被踢*/
+static  NSString *NOTI_LOGIN_SINGLE = @"NOTI_LOGIN_SINGLE";
 
 @class AhRequest;
 
