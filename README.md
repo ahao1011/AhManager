@@ -34,7 +34,7 @@ cocoapods源码是在github上进行管理的,就像java语言的maven,nodejs的
 ## <a id="install_ahnet"></a> AhNetManager安装
 ###使用cocoapods安装
 ```ruby
-	pod 'AhNetManager', '~> 0.2.0'
+	pod 'AhManager', '~> 0.3.8'
 ```
 ###手动安装
  导入NETManager文件夹以及所含文件到自己的项目中
