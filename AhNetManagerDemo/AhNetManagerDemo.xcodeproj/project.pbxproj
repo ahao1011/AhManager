@@ -13,6 +13,8 @@
 		E022D60D1E35E493005BB409 /* BaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E022D6061E35E493005BB409 /* BaseObject.m */; };
 		E022D60E1E35E493005BB409 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E022D6081E35E493005BB409 /* NetManager.m */; };
 		E022D60F1E35E493005BB409 /* SystemSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E022D60A1E35E493005BB409 /* SystemSet.m */; };
+		E022D6121E35F214005BB409 /* NetTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E022D6111E35F214005BB409 /* NetTool.m */; };
+		E022D6151E36062F005BB409 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E022D6141E36062F005BB409 /* BaseViewController.m */; };
 		E0912F871E2DC66900091321 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E0912F861E2DC66900091321 /* main.m */; };
 		E0912F8A1E2DC66900091321 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E0912F891E2DC66900091321 /* AppDelegate.m */; };
 		E0912F8D1E2DC66900091321 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0912F8C1E2DC66900091321 /* ViewController.m */; };
@@ -57,6 +59,10 @@
 		E022D6081E35E493005BB409 /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
 		E022D6091E35E493005BB409 /* SystemSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemSet.h; sourceTree = "<group>"; };
 		E022D60A1E35E493005BB409 /* SystemSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemSet.m; sourceTree = "<group>"; };
+		E022D6101E35F214005BB409 /* NetTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetTool.h; sourceTree = "<group>"; };
+		E022D6111E35F214005BB409 /* NetTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetTool.m; sourceTree = "<group>"; };
+		E022D6131E36062E005BB409 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		E022D6141E36062F005BB409 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		E0912F821E2DC66900091321 /* AhNetManagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AhNetManagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0912F861E2DC66900091321 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E0912F881E2DC66900091321 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -136,6 +142,8 @@
 				E022D6081E35E493005BB409 /* NetManager.m */,
 				E022D6091E35E493005BB409 /* SystemSet.h */,
 				E022D60A1E35E493005BB409 /* SystemSet.m */,
+				E022D6101E35F214005BB409 /* NetTool.h */,
+				E022D6111E35F214005BB409 /* NetTool.m */,
 			);
 			path = AhManager;
 			sourceTree = "<group>";
@@ -170,6 +178,8 @@
 				E0912F891E2DC66900091321 /* AppDelegate.m */,
 				E0912F8B1E2DC66900091321 /* ViewController.h */,
 				E0912F8C1E2DC66900091321 /* ViewController.m */,
+				E022D6131E36062E005BB409 /* BaseViewController.h */,
+				E022D6141E36062F005BB409 /* BaseViewController.m */,
 				E0912F8E1E2DC66900091321 /* Main.storyboard */,
 				E0912FC81E2DC74C00091321 /* test.png */,
 				E0912FC91E2DC74C00091321 /* TextRequest.h */,
@@ -399,9 +409,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0912F8D1E2DC66900091321 /* ViewController.m in Sources */,
+				E022D6151E36062F005BB409 /* BaseViewController.m in Sources */,
 				E022D60D1E35E493005BB409 /* BaseObject.m in Sources */,
 				E0912F8A1E2DC66900091321 /* AppDelegate.m in Sources */,
 				E0912F871E2DC66900091321 /* main.m in Sources */,
+				E022D6121E35F214005BB409 /* NetTool.m in Sources */,
 				E022D60C1E35E493005BB409 /* AhResult.m in Sources */,
 				E0912FCE1E2DC74C00091321 /* TextRequest.m in Sources */,
 				E022D60B1E35E493005BB409 /* AhRequest.m in Sources */,

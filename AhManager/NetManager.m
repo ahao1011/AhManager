@@ -10,7 +10,7 @@
 #ifdef DEBUG
 #define BreachLog(s, ... ) NSLog( @"[%@ in line %d] ===============>%@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
 #else
-#define HYBAppLog(s, ... )
+#define BreachLog(s, ... )
 #endif
 
 #import "NetManager.h"
@@ -24,6 +24,8 @@
 #import "AhRequest.h"
 #import "AFNetworkReachabilityManager.h"
 #import "SystemSet.h"
+#import "NetTool.h"
+#import "MBProgressHUD.h"
 
 /**接受SessionTask的数组*/
 static NSMutableArray *TaskArr;
@@ -39,15 +41,15 @@ static NSMutableArray *TaskArr;
         switch  (status)  {
                 
             case   AFNetworkReachabilityStatusReachableViaWWAN:
-                [[NSNotificationCenter defaultCenter]postNotificationName:NET_CHANGE_WWAN object:nil];
+                [[NSNotificationCenter defaultCenter]postNotificationName:NOTI_NET_CHANGE_WWAN object:nil];
             break;
                 
             case   AFNetworkReachabilityStatusReachableViaWiFi:
-                 [[NSNotificationCenter defaultCenter]postNotificationName:NET_CHANGE_WiFi object:nil];
+                 [[NSNotificationCenter defaultCenter]postNotificationName:NOTI_NET_CHANGE_WiFi object:nil];
             break;
                 
             case   AFNetworkReachabilityStatusNotReachable:
-                [[NSNotificationCenter defaultCenter]postNotificationName:NET_CHANGE_NotReachable object:nil];
+                [[NSNotificationCenter defaultCenter]postNotificationName:NOTI_NET_CHANGE_NotReachable object:nil];
                 break;
             default:
                 
@@ -96,7 +98,11 @@ static NSMutableArray *TaskArr;
     if ([SystemSet defaultSet].DeBug) {  //  打开打印
         MJExtensionLog(@" 🈹🈹🈹  🈹🈹🈹  🈹🈹🈹  🈹🈹🈹  🈹🈹🈹 \n 请求模型:%@\n 参数为:\n %@ \n",[NSString stringWithUTF8String:class_getName(Request.class)],parameters);
     }
+    MBProgressHUD *hub  = [NetTool showWaitWithText:nil ToVc:[SystemSet defaultSet].CurrentVc];
+    
     AhSessionTask *task =  [mgr GET:URLString parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+        hub.progress =downloadProgress.completedUnitCount/downloadProgress.totalUnitCount;
         
         if (Progress) {
             
@@ -105,10 +111,10 @@ static NSMutableArray *TaskArr;
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-       [self sucHandle:responseObject parameters:Request Url:URLString success:success];
+       [self sucHandle:responseObject parameters:Request Url:URLString success:success hub:hub];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-         [self failHandle:error parameters:Request Url:URLString failure:failure];
+         [self failHandle:error parameters:Request Url:URLString failure:failure hub:hub];
     }];
     if (task) {
         [[self allTasks]addObject:task];
@@ -131,18 +137,20 @@ static NSMutableArray *TaskArr;
     if ([SystemSet defaultSet].DeBug) {  //  打开打印
         MJExtensionLog(@" 🈹🈹🈹  🈹🈹🈹  🈹🈹🈹  🈹🈹🈹  🈹🈹🈹 \n 请求模型:%@\n 请求地址:%@ 请求参数为:\n %@ \n",[NSString stringWithUTF8String:class_getName(Request.class)],URLString,parameters);
     }
+     MBProgressHUD *hub  = [NetTool showWaitWithText:nil ToVc:[SystemSet defaultSet].CurrentVc];
     AhSessionTask *task =  [mgr POST:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress ) {
+         hub.progress =uploadProgress.completedUnitCount/uploadProgress.totalUnitCount;
         if (Progress) {
             Progress(uploadProgress.completedUnitCount,uploadProgress.totalUnitCount);
         }
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        [self sucHandle:responseObject parameters:Request Url:URLString success:success];
+        [self sucHandle:responseObject parameters:Request Url:URLString success:success hub:hub];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
        
-        [self failHandle:error parameters:Request Url:URLString failure:failure];
+        [self failHandle:error parameters:Request Url:URLString failure:failure hub:hub];
     }];
     if (task) {
         [[self allTasks]addObject:task];
@@ -168,7 +176,7 @@ static NSMutableArray *TaskArr;
         MJExtensionLog(@" 🈹🈹🈹  🈹🈹🈹  🈹🈹🈹  🈹🈹🈹  🈹🈹🈹 \n 请求模型:%@\n 请求地址:%@ 请求参数为:\n %@ \n",[NSString stringWithUTF8String:class_getName(Request.class)],URLString,parameters);
     }
     AhSessionTask *task =nil;
-    
+    MBProgressHUD *hub  = [NetTool showWaitWithText:@"图片上传中..." ToVc:[SystemSet defaultSet].CurrentVc];
     task= [mgr POST:URLString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
         NSData *file = UIImagePNGRepresentation(image);
@@ -182,6 +190,7 @@ static NSMutableArray *TaskArr;
         
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         
+         hub.progress =uploadProgress.completedUnitCount/uploadProgress.totalUnitCount;
         if (Progress) {
             Progress(uploadProgress.completedUnitCount,uploadProgress.totalUnitCount);
         }
@@ -189,11 +198,11 @@ static NSMutableArray *TaskArr;
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-       [self sucHandle:responseObject parameters:Request Url:URLString success:success];
+       [self sucHandle:responseObject parameters:Request Url:URLString success:success hub:hub];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
-        [self failHandle:error parameters:Request Url:URLString failure:failure];
+        [self failHandle:error parameters:Request Url:URLString failure:failure hub:hub];
     }];
 
     
@@ -315,7 +324,7 @@ static NSMutableArray *TaskArr;
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
     // 设置请求时间
-    manager.requestSerializer.timeoutInterval = 15;
+    manager.requestSerializer.timeoutInterval =30;
     //  拿最原始的data数据
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
@@ -451,27 +460,12 @@ static NSMutableArray *TaskArr;
     return NewStatusResult;
 }
 
-#pragma mark- 转圈
-+ (void)showWaitView:(BOOL)IsShow{
-    
-   
-}
-#pragma mark- 抛异常
-+ (void)showMessage:(NSString *)message{
-    
-   
-}
-
-#pragma mark- 转圈+定制描述
-+ (void)showWaitView:(BOOL)IsShow withTitle:(NSString*)title{
-    
-   
-}
-
 #pragma mark - 网络成功后的处理
 /**网络请求成功后的处理*/
-+ (void)sucHandle:(id)responseObject parameters:(AhResult*)Request Url:(NSString *)URLString  success:(void (^)(id responseObject,NSString*status))success
++ (void)sucHandle:(id)responseObject parameters:(AhResult*)Request Url:(NSString *)URLString  success:(void (^)(id responseObject,NSString*status))success hub:(MBProgressHUD*)hub
 {
+    
+    [hub hideAnimated:YES];
     
     if (success) {
         
@@ -500,8 +494,19 @@ static NSMutableArray *TaskArr;
                 MJExtensionLog(@"否❌否❌否❌否❌否❌否❌否❌ 抛出异常:%@\n status:%@\n 接受数据为:\n msg:%@ \n ",resultClassName,result.status,result.msg);
                 if (result.msg) {
                     
-                    [self showMessage:result.msg];
+                    [NetTool showmsg:result.msg Tovc:[SystemSet defaultSet].CurrentVc];
                 }
+                
+                if ([SystemSet defaultSet].LoginOutStatus.length>0 && [result.status isEqualToString:[SystemSet defaultSet].LoginOutStatus]) {
+                    
+                    [[NSNotificationCenter defaultCenter]postNotificationName:NOTI_LOGIN_OUT object:nil];
+                }
+                
+                if ([SystemSet defaultSet].LoginSiginleStatus.length>0 && [result.status isEqualToString:[SystemSet defaultSet].LoginSiginleStatus]) {
+                    
+                    [[NSNotificationCenter defaultCenter]postNotificationName:NOTI_LOGIN_SINGLE object:nil];
+                }
+                
                 if ([[self StatusResult]containsObject:URLString]) {  // 某些特定的接口异常要暴露出去,
                     
                     success(result,result.status);
@@ -517,7 +522,9 @@ static NSMutableArray *TaskArr;
 }
 #pragma mark - 网络请求失败后的处理
 /**网络请求失败后的处理*/
-+ (void)failHandle:(id)error parameters:(AhResult*)Request Url:(NSString *)URLString  failure:(void (^)(NSError *error))failure{
++ (void)failHandle:(id)error parameters:(AhResult*)Request Url:(NSString *)URLString  failure:(void (^)(NSError *error))failure hub:(MBProgressHUD*)hub{
+    
+    [hub hideAnimated:YES];
     
     if ([SystemSet defaultSet].DeBug) {  //  打开打印
         MJExtensionLog(@"否❌否❌否❌否❌否❌否❌否❌否❌否❌ \n 数据请求失败 \n: 请求模型:%@\n 请求路径:%@\n error: %@ \n\n\n",[NSString stringWithUTF8String:class_getName(Request.class)],URLString,error);

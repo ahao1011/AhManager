@@ -7,12 +7,25 @@
 //
 
 #import "BaseViewController.h"
-
+#import "SystemSet.h"
+#import "NetTool.h"
 @interface BaseViewController ()
 
 @end
 
 @implementation BaseViewController
+
+- (void)viewWillAppear:(BOOL)animated{
+    
+    [SystemSet defaultSet].CurrentVc = self;
+    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    
+    [NetTool hideHubFromVC:self];
+    [super viewWillDisappear:animated];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
