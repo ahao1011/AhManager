@@ -7,11 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "NetManager.h"
+
 #import "TextResult.h"
 #import "TextRequest.h"
-#import "SystemSet.h"
-#import "NetTool.h"
+#import "AhManager.h"
+
 
 @interface ViewController ()
 
