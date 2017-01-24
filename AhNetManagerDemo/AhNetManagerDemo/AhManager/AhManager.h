@@ -9,5 +9,10 @@
 #ifndef AhManager_h
 #define AhManager_h
 
+#import "AhRequest.h"
+#import "AhResult.h"
+#import "NetManager.h"
+#import "SystemSet.h"
+#import "NetTool.h"
 
 #endif /* AhManager_h */

@@ -84,6 +84,7 @@
 		E0912FCA1E2DC74C00091321 /* TextRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextRequest.m; sourceTree = "<group>"; };
 		E0912FCB1E2DC74C00091321 /* TextResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextResult.h; sourceTree = "<group>"; };
 		E0912FCC1E2DC74C00091321 /* TextResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextResult.m; sourceTree = "<group>"; };
+		E0A570931E36FB71004D7097 /* AhManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AhManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +145,7 @@
 				E022D60A1E35E493005BB409 /* SystemSet.m */,
 				E022D6101E35F214005BB409 /* NetTool.h */,
 				E022D6111E35F214005BB409 /* NetTool.m */,
+				E0A570931E36FB71004D7097 /* AhManager.h */,
 			);
 			path = AhManager;
 			sourceTree = "<group>";

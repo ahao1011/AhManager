@@ -7,8 +7,7 @@
 //
 
 #import "BaseViewController.h"
-#import "SystemSet.h"
-#import "NetTool.h"
+#import "AhManager.h"
 @interface BaseViewController ()
 
 @end
