@@ -38,6 +38,11 @@ cocoapods源码是在github上进行管理的,就像java语言的maven,nodejs的
 ```
 ###手动安装
  导入NETManager文件夹以及所含文件到自己的项目中
+ 
+ <div><font color=#0099ff size=3 face="黑体">注意: pod后可能会会出现出现不能引入Netmanager.h的情况,选择工程的 Target -> Build Settings 菜单，找到\”User Header Search Paths\”设置项
+新增一个值"$(PODS_ROOT)"，并且选择\”recursive\”，这样xcode就会在项目目录中递归搜索文件自动补齐功能马上就好使了。</div>
+
+
 # <a id="examples_ahnet"></a> AhNetmanager操作示例
 ## <a id="set_ahnet"></a> 配置初始化
 在AppDelegate.m的didFinishLaunchingWithOptions方法中进行网络的初始化配置,这些配置需要在你进行网络请求前设好好,且只需要设置一次.
